@@ -42,11 +42,91 @@ Yi Coder is a suite of advanced code language models, meticulously trained from 
 🔥 **2024-09-04**: The Yi-Coder model is open sourced and available to the public.
 
 # Quick Start
-- **Hardware and software requirements**
-- **Inference**
-  - ollama
-  - transformers
-  - vllm 
+## Hardware and software requirements
+To set up the environment and install the required packages, execute the following command.
+```bash
+git clone https://github.com/01-ai/Yi-Coder.git
+cd Yi-Coder
+pip install -r requirements.txt
+```
+## transformers
+You can use transformers to quickly reason Yi chat or the base model to reason as follows.
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+device = "cuda" # the device to load the model onto
+model_path = '../pretrain2/9b_chat'
+
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto").eval()
+
+prompt = "Write a quick sort algorithm."
+messages = [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": prompt}
+]
+text = tokenizer.apply_chat_template(
+    messages,
+    tokenize=False,
+    add_generation_prompt=True
+)
+model_inputs = tokenizer([text], return_tensors="pt").to(device)
+
+generated_ids = model.generate(
+    model_inputs.input_ids,
+    max_new_tokens=1024,
+    eos_token_id=tokenizer.eos_token_id  
+)
+generated_ids = [
+    output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+]
+
+response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+print(response)
+```
+## vllm
+You can also use vLLM to reason about Yi-Coder models. vLLM is a fast and easy-to-use library for reasoning about and serving large language models (LLMs). Be sure to install vLLM and then do the following
+```python
+from transformers import AutoTokenizer
+from vllm import LLM, SamplingParams
+model_path = <Huggingface>
+
+tokenizer = AutoTokenizer.from_pretrained(model_path)
+
+sampling_params = SamplingParams(
+    temperature=0.8,
+    top_p=0.8)
+
+llm = LLM(model=model_path, 
+          gpu_memory_utilization=0.9, 
+          max_model_len=1024)
+
+prompt = "Write a quick sort algorithm."  
+messages = [
+    {"role": "user", "content": prompt}
+]
+text = tokenizer.apply_chat_template(
+    messages,
+    tokenize=False,
+    add_generation_prompt=True
+)
+print(text)
+
+# Generate the response
+outputs = llm.generate([text], sampling_params)
+
+# Print the output
+for output in outputs:
+    prompt = output.prompt
+    generated_text = output.outputs[0].text
+    print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
+
+```
+## ollama
+Yi-Coder is now available on Ollama! Please install the latest version of Ollama and run the following command:
+```bash
+Ollama run Yi-Coder
+```
 
 # Cookbook
 
