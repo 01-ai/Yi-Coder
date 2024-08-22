@@ -10,10 +10,10 @@ Yi Coder is a suite of advanced code language models, meticulously trained from 
 
 # Quick Start
 - **Hardware and software requirements**
-- **local**
-  - transformers
+- **Inference**
   - ollama
-- **vllm** (text / chat completion)
+  - transformers
+  - vllm 
 
 # Cookbook
 
