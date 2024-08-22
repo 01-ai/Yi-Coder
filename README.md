@@ -131,11 +131,11 @@ Ollama run Yi-Coder
 # Cookbook
 | Category                    | Description                  | Notebook, Markdown                                                                                                                  | 
 |:----------------------------|:-----------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| infernce, swift              | Perform efficient inference with the Yi model using Swift.    | [Inference_using_swift.ipynb](./en/opensource/Inference/Inference_using_swift.ipynb)                                      | 
-| infernce, transformers       | Utilize Transformers to rapidly infer the Yi model.  | [Inference_using_transformers.ipynb](./en/opensource/Inference/Inference_using_transformers.ipynb)                           |
-| infernce, Imdeploy           | Experience fast inference with the Yi model through Imdeploy.  | [Inference_using_lmdeploy.ipynb](./en/opensource/Inference/Inference_using_lmdeploy.ipynb)                                | 
-| infernce, vllm               | Deploy vllm for quick and efficient inference with the Yi model.       | [vLLM_Inference_tutorial.ipynb](./en/opensource/Inference/vLLM_Inference_tutorial.ipynb)                                  | 
-| quantization, swift          | Learn how to quantize your Yi model using the power of Swift.         | [swift-yi-quantization.md](./en/opensource/quantization/swift-yi-quantization.md)                                           |
+| System prompt              | Perform efficient inference with the Yi model using Swift.    | [Inference_using_swift.ipynb](./en/opensource/Inference/Inference_using_swift.ipynb)                                      | 
+| Webpage Artifacts      | Utilize Transformers to rapidly infer the Yi model.  | [Inference_using_transformers.ipynb](./en/opensource/Inference/Inference_using_transformers.ipynb)                           |
+| NL2SQL           | Experience fast inference with the Yi model through Imdeploy.  | [Inference_using_lmdeploy.ipynb](./en/opensource/Inference/Inference_using_lmdeploy.ipynb)                                | 
+| fine-tune              | Deploy vllm for quick and efficient inference with the Yi model.       | [vLLM_Inference_tutorial.ipynb](./en/opensource/Inference/vLLM_Inference_tutorial.ipynb)                                  | 
+| quantization          | Learn how to quantize your Yi model using the power of Swift.         | [swift-yi-quantization.md](./en/opensource/quantization/swift-yi-quantization.md)                                           |
 # Training procedure
 
 # License
