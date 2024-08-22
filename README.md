@@ -1,3 +1,36 @@
+<table>
+  <tr>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/01-ai/Yi/main/assets/img/Yi_logo_icon_dark.svg" width="200px">
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/01-ai/Yi/main/assets/img/Yi_logo_icon_light.svg" width="200px"> 
+        <img alt="Yi Logo" src="https://raw.githubusercontent.com/01-ai/Yi/main/assets/img/Yi_logo_icon_light.svg" width="200px">
+      </picture>
+    </td>
+    <td>
+      <div align="center">
+        <h3>Building the Next Generation of Open-Source and Bilingual LLMs</h3>
+        <p>
+          🤗 <a href="https://huggingface.co/01-ai" target="_blank">Hugging Face</a> • 🤖 <a href="https://www.modelscope.cn/organization/01ai/" target="_blank">ModelScope</a> • 🟣 <a href="https://wisemodel.cn/organization/01.AI" target="_blank">wisemodel</a>
+        </p>
+        <p>
+          👩‍🚀 Ask questions or discuss ideas on <a href="https://github.com/01-ai/Yi/discussions" target="_blank"> GitHub </a>
+        </p> 
+        <p>
+          👋 Join us on <a href="https://discord.gg/hYUwWddeAu" target="_blank"> 👾 Discord </a> or <a href="https://github.com/01-ai/Yi/issues/43#issuecomment-1827285245" target="_blank"> 💬 WeChat </a>
+        </p> 
+        <p>
+          📝 Check out <a href="https://arxiv.org/abs/2403.04652"> Yi Tech Report </a>
+        </p> 
+        <p>
+          💪 Learn at <a href="https://01-ai.github.io/"> Yi Tech Blog </a>
+        </p> 
+      </div>
+    </td>
+  </tr>
+</table>
+
+
 # Introduction to Yi-Coder
 Yi Coder is a suite of advanced code language models, meticulously trained from the ground up on a dataset of 3 trillion tokens, with 2 trillion specifically dedicated to code. We offer two model sizes: 1.5B and 9B parameters. Each model is pre-trained on a project-level code corpus utilizing a 128K token context window and an additional fill-in-the-blank task. Yi Coder supports a wide range of functions, including code completion, generation, interpretation, web search, and repository-level code Q&A, catering to various software development scenarios. Yi Coder has demonstrated highly competitive performance on public benchmarks such as LiveCodeBench and HumanEval.
 
