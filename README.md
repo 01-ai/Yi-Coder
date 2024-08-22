@@ -55,7 +55,7 @@ You can use transformers to quickly reason Yi chat or the base model to reason a
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 device = "cuda" # the device to load the model onto
-model_path = '../pretrain2/9b_chat'
+model_path = <Huggingface>
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto").eval()
