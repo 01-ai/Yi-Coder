@@ -131,7 +131,7 @@ Ollama run Yi-Coder
 # Cookbook
 | Category                    | Description                  | Notebook, Markdown                                                                                                                  | 
 |:----------------------------|:-----------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| System prompt              | Perform efficient inference with the Yi model using Swift.    | [Inference_using_swift.ipynb](./en/opensource/Inference/Inference_using_swift.ipynb)                                      | 
+| System prompt              | Code Completion/Code Insertion/Intelligent Quality Assurance System prompt Tutorials   | [Inference_using_swift.ipynb](./en/opensource/Inference/Inference_using_swift.ipynb)                                      | 
 | Webpage Artifacts      | Utilize Transformers to rapidly infer the Yi model.  | [Inference_using_transformers.ipynb](./en/opensource/Inference/Inference_using_transformers.ipynb)                           |
 | NL2SQL           | Experience fast inference with the Yi model through Imdeploy.  | [Inference_using_lmdeploy.ipynb](./en/opensource/Inference/Inference_using_lmdeploy.ipynb)                                | 
 | fine-tune              | Deploy vllm for quick and efficient inference with the Yi model.       | [vLLM_Inference_tutorial.ipynb](./en/opensource/Inference/vLLM_Inference_tutorial.ipynb)                                  | 
