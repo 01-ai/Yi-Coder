@@ -1,29 +1,30 @@
 
 <p align="left"> 
-  <img src="https://github.com/01-ai/Yi/blob/main/assets/img/coder.gif?raw=true" alt="Empowering Code with Precision and Performance" width="800"/> 
+  <img src="https://github.com/01-ai/Yi/blob/main/assets/img/coder.gif?raw=true" alt="Empowering Code with Precision and Performance" width="500"/> 
 </p>
 
 
 # Introduction to Yi-Coder
-Yi Coder is a suite of advanced code language models, meticulously trained from the ground up on a dataset of 3 trillion tokens, with 2 trillion specifically dedicated to code. We offer two model sizes: 1.5B and 9B parameters. Each model is pre-trained on a project-level code corpus utilizing a 128K token context window and an additional fill-in-the-blank task. Yi Coder supports a wide range of functions, including code completion, generation, interpretation, web search, and repository-level code Q&A, catering to various software development scenarios. Yi Coder has demonstrated highly competitive performance on public benchmarks such as LiveCodeBench and HumanEval.
-
-## Highlights：
-- **Powerful Coding Performance**: Yi Coder excels in models with less than 10 billion parameters, achieving performance on par with DeepSeek-Coder 33B and Qwen Coder 7B, delivering outstanding code generation capabilities.
-- **Support Long Context Window**: Yi Coder supports a long context window of up to 128K tokens, with a custom "needle-in-the-code" feature that consistently delivers excellent, fully green results in testing.
+Yi-Coder series models are trained for coding tasks and deliver state-of-the-art coding performance among models under 10 billion parameters. With two model sizes (1.5B and 9B) available in both base and chat versions, Yi-Coder series models support 52 coding languages, which are powerful tools for developers.
+## Key features：
+- **Long-Context Capability**: Yi Coder series models excel in long-context understanding, handling up to 128K tokens and enabling project-level code comprehension and generation.
+- **Small but mighty**: Yi-Coder series models outperform other models under 10 billion parameters such as CodeQwen1.5 7B and CodeGeex4 9B, and even achieve performance on par with DeepSeek-Coder 33B.
+- **Extensive Training**: Yi-Coder-9B is trained on 2.4T tokens and builds on Yi-9B, while Yi-Coder-1.5B is trained from scratch on 3.1T tokens, plus the same 2.4T tokens. 
+- **Various scenarios**: Yi-Coder series models are versatile in various tasks, such as basic and competitive programming, code editing and debugging, completion, and mathematical reasoning.
 
 # News
-🔥 **2024-09-04**: The Yi-Coder model is open sourced and available to the public.
+🔥 **2024-09-05**: The Yi-Coder model is open sourced and available to the public.
 
 # Quick Start
-## Hardware and software requirements
-To set up the environment and install the required packages, execute the following command.
+## Requirements
+To set up the environment and install the requirements, run the following command: 
 ```bash
 git clone https://github.com/01-ai/Yi-Coder.git
 cd Yi-Coder
 pip install -r requirements.txt
 ```
-## transformers
-You can use transformers to quickly reason Yi chat or the base model to reason as follows.
+## Transformers
+You can use transformers to run inference with Yi-Coder models (both chat and base versions) as follows:
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -96,26 +97,25 @@ for output in outputs:
 
 ```
 ## ollama
-Yi-Coder is now available on Ollama! Please install the latest version of Ollama and run the following command:
+Yi-Coder series models are now available on Ollama! Install the latest version of Ollama and run the following command: 
 ```bash
 Ollama run Yi-Coder
 ```
 
 # Cookbook
-| Category                    | Description                  | Notebook, Markdown                                                                                                                  | 
-|:----------------------------|:-----------------------------|:--------------------------------------------------------------------------------------------------------------------------|
-| System prompt              | Code Completion/Code Insertion/Repo Q&A System prompt Tutorials.   | [Inference_using_swift.ipynb](./en/opensource/Inference/Inference_using_swift.ipynb)                                      | 
-| Webpage Artifacts      | Turn your ideas into web pages with the help of Yi Coder!  | [Inference_using_transformers.ipynb](./en/opensource/Inference/Inference_using_transformers.ipynb)                           |
-| NL2SQL           | Experience fast inference with the Yi model through Imdeploy.  | [Inference_using_lmdeploy.ipynb](./en/opensource/Inference/Inference_using_lmdeploy.ipynb)                                | 
-| fine-tune              | Deploy vllm for quick and efficient inference with the Yi model.       | [vLLM_Inference_tutorial.ipynb](./en/opensource/Inference/vLLM_Inference_tutorial.ipynb)                                  | 
-| quantization          | Learn how to quantize your Yi model using the power of Swift.         | [swift-yi-quantization.md](./en/opensource/quantization/swift-yi-quantization.md)                                           |
-# Training procedure
+- [System prompt](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_swift.ipynb): Enhance coding workflow with code completion, insertion, and quality assurance.
+- [Webpage](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_transformers.ipynb): Turn your ideas into web pages!
+- [NL2SQL](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_lmdeploy.ipynb): Convert natural language queries into Structured Query Language (SQL).
+- [Fine-tune](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/vLLM_Inference_tutorial.ipynb): Fine-tune the Yi-Coder series models for your specific needs.
+- [Quantization](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/quantization/swift-yi-quantization.md): Quantize your Yi-Coder series models using Swift.
+
 
 # License
 The code and weights of the Yi-Coder series models are distributed under the Apache 2.0 license.
 
 If you create derivative works based on this model, please include the following attribution in your derivative works:
 
-```This work is a derivative of [The Yi-Coder Series Model You Base On] by 01.AI, used under the Apache 2.0 License.```
+```This work is a derivative of [The Yi Series Model You Based On] by 01.AI, licensed under the Apache 2.0 License.```
 
 # Star
+ 🚀 Propser with Yi-Coder—star it! 🌟
