@@ -5,15 +5,16 @@
 
 
 # Introduction to Yi-Coder
-Yi-Coder series models are trained for coding tasks and deliver state-of-the-art coding performance among models under 10 billion parameters. With two model sizes (1.5B and 9B) available in both base and chat versions, Yi-Coder series models support 52 coding languages, which are powerful tools for developers.
-## Key features：
-- **Long-Context Capability**: Yi Coder series models excel in long-context understanding, handling up to 128K tokens and enabling project-level code comprehension and generation.
-- **Small but mighty**: Yi-Coder series models outperform other models under 10 billion parameters such as CodeQwen1.5 7B and CodeGeex4 9B, and even achieve performance on par with DeepSeek-Coder 33B.
-- **Extensive Training**: Yi-Coder-9B is trained on 2.4T tokens and builds on Yi-9B, while Yi-Coder-1.5B is trained from scratch on 3.1T tokens, plus the same 2.4T tokens. 
-- **Various scenarios**: Yi-Coder series models are versatile in various tasks, such as basic and competitive programming, code editing and debugging, completion, and mathematical reasoning.
+**Yi-Coder series models** are trained for coding tasks and **outperform other models under 10 billion parameters** such as CodeQwen1.5 7B and CodeGeex4 9B, and even stay on par with DeepSeek-Coder 33B. 
+
+Yi-Coder excels in long-context understanding, **handling up to 128K tokens** for project-level code comprehension and generation. It is versatile in tasks like programming, code editing, debugging, completion, and mathematical reasoning. 
+
+Yi-Coder comes in 2 model sizes, 1.5B and 9B, supporting 52 coding languages. 
+
+For model details and benchmarks, see Yi-Coder blog.
 
 # News
-🔥 **2024-09-05**: The Yi-Coder model is open sourced and available to the public.
+🔥 **2024-09-05**: The Yi-Coder series models are open sourced and available to the public.
 
 # Quick Start
 ## Requirements
