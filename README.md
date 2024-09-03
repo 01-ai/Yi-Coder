@@ -18,7 +18,7 @@ For model details and benchmarks, see Yi-Coder blog.
 
 # Quick Start
 ## Requirements
-To set up the environment and install the requirements, run the following command: 
+Make sure you have `python>=3.9` installed before using it.\nTo set up the environment and install the requirements, run the following command: 
 ```bash
 git clone https://github.com/01-ai/Yi-Coder.git
 cd Yi-Coder
