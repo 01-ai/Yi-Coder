@@ -30,7 +30,7 @@ You can use transformers to run inference with Yi-Coder models (both chat and ba
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 device = "cuda" # the device to load the model onto
-model_path = <Huggingface>
+model_path = "01-ai/Yi-Coder-9B-Chat"
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto").eval()
@@ -64,7 +64,7 @@ You can also use vLLM to reason about Yi-Coder models. vLLM is a fast and easy-t
 ```python
 from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
-model_path = <Huggingface>
+model_path = "01-ai/Yi-Coder-9B-Chat"
 
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
