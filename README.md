@@ -105,10 +105,10 @@ Ollama run Yi-Coder
 
 # Cookbook
 - [System prompt](https://github.com/01-ai/Yi-Coder/blob/main/cookbook/System_prompt/System_prompt.ipynb): Enhance coding workflow with code completion, insertion, and quality assurance.
-- [Webpage](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_transformers.ipynb): Turn your ideas into web pages!
-- [NL2SQL](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_lmdeploy.ipynb): Convert natural language queries into Structured Query Language (SQL).
-- [Fine-tune](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/vLLM_Inference_tutorial.ipynb): Fine-tune the Yi-Coder series models for your specific needs.
-- [Quantization](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/quantization/swift-yi-quantization.md): Quantize your Yi-Coder series models using Swift.
+- [Webpage](https://github.com/01-ai/Yi-Coder/blob/main/cookbook/Webpage/Webpage.md): Turn your ideas into web pages!
+- [NL2SQL](https://github.com/01-ai/Yi-Coder/blob/main/cookbook/NL2SQL/NL2SQL.md): Convert natural language queries into Structured Query Language (SQL).
+- [Fine-tune](https://github.com/01-ai/Yi-Coder/blob/main/cookbook/Fine_tune/finetune.md): Fine-tune the Yi-Coder series models for your specific needs.
+- [Quantization](https://github.com/01-ai/Yi-Coder/blob/main/cookbook/Quantization/quantization.md): Quantize your Yi-Coder series models using Swift.
 
 
 # License
