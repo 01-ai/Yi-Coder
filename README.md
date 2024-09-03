@@ -1,17 +1,20 @@
 
-<p align="left"> 
-  <img src="https://github.com/01-ai/Yi/blob/main/assets/img/coder.gif?raw=true" alt="Empowering Code with Precision and Performance" width="500"/> 
+<p align="center"> 
+  <img src="https://github.com/01-ai/Yi/blob/main/assets/img/yicoder.gif?raw=true" alt="yicoder" width="500"/> 
 </p>
 
 
 # Introduction to Yi-Coder
-**Yi-Coder series models** are trained for coding tasks and **outperform other models under 10 billion parameters** such as CodeQwen1.5 7B and CodeGeex4 9B, and even stay on par with DeepSeek-Coder 33B. 
+**Yi-Coder series models** Yi-Coder series models are trained for coding tasks with two sizes available, 1.5B and 9B, supporting 52 major coding languages. Notably, the Yi-Coder-9B outperforms other models under 10 billion parameters such as CodeQwen1.5 7B and CodeGeex4 9B, and even achieves performance on par with DeepSeek-Coder 33B.
 
-Yi-Coder excels in long-context understanding, **handling up to 128K tokens** for project-level code comprehension and generation. It is versatile in tasks like programming, code editing, debugging, completion, and mathematical reasoning. 
+Yi-Coder excels in long-context understanding, handling up to 128K tokens for project-level code comprehension and generation. Despite its relatively small size, Yi-coder is versatile in tasks like programming, code editing, debugging, completion, and mathematical reasoning. 
 
-Yi-Coder comes in 2 model sizes, 1.5B and 9B, supporting 52 coding languages. 
+<p align="left">
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo1.gif?raw=true" alt="demo1" width="500"/>
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo2.gif?raw=true" alt="demo2" width="500"/>
+</p>
 
-For model details and benchmarks, see Yi-Coder blog.
+For more details, see Yi-Coder blog.
 
 # News
 🔥 **2024-09-05**: The Yi-Coder series models are open sourced and available to the public.
