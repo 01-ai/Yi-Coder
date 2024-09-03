@@ -5,7 +5,7 @@
 
 
 # Introduction to Yi-Coder
-**Yi-Coder series models** Yi-Coder series models are trained for coding tasks with two sizes available, 1.5B and 9B, supporting 52 major coding languages. Notably, the Yi-Coder-9B outperforms other models under 10 billion parameters such as CodeQwen1.5 7B and CodeGeex4 9B, and even achieves performance on par with DeepSeek-Coder 33B.
+**Yi-Coder series models** are trained for coding tasks with two sizes available, 1.5B and 9B, supporting 52 major coding languages. Notably, the Yi-Coder-9B outperforms other models under 10 billion parameters such as CodeQwen1.5 7B and CodeGeex4 9B, and even achieves performance on par with DeepSeek-Coder 33B.
 
 Yi-Coder excels in long-context understanding, handling up to 128K tokens for project-level code comprehension and generation. Despite its relatively small size, Yi-coder is versatile in tasks like programming, code editing, debugging, completion, and mathematical reasoning. 
 
