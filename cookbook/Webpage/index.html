@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Mono&display=swap');
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --background-color: #f8f9fa;
+            --text-color: #2d3436;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --gradient-start: #8e2de2;
+            --gradient-end: #4a00e0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: var(--text-color);
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            width: 95%;
+            max-width: 1600px;
+            height: 95vh;
+            margin: auto;
+            background: var(--background-color);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow-color);
+        }
+        .sidebar, .main { padding: 30px; transition: all 0.3s ease; }
+        .sidebar {
+            width: 35%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .main {
+            width: 65%;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2 {
+            margin: 0;
+            padding: 20px 0;
+            color: var(--primary-color);
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .chat-container {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--secondary-color) transparent;
+        }
+        .chat-container::-webkit-scrollbar { width: 6px; }
+        .chat-container::-webkit-scrollbar-thumb {
+            background-color: var(--secondary-color);
+            border-radius: 3px;
+        }
+        .input-container {
+            display: flex;
+            padding: 20px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        #userInput, button {
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        #userInput {
+            flex-grow: 1;
+            border: 2px solid var(--secondary-color);
+            margin-right: 10px;
+            color: var(--text-color);
+        }
+        #userInput:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(108, 92, 231, 0.2);
+            border-color: var(--primary-color);
+        }
+        button {
+            border: none;
+            background-color: var(--primary-color);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .main-header h2 { margin: 0; padding: 0; }
+        .view-toggle {
+            display: flex;
+            background: #f1f1f1;
+            border-radius: 20px;
+            padding: 5px;
+        }
+        .view-toggle button {
+            background: none;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-color);
+        }
+        .view-toggle button.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        .preview-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .preview-header {
+            padding: 10px;
+            display: flex;
+        }
+        .preview-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .preview-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        .preview-button:hover { transform: scale(1.2); }
+        .preview-button.red { background-color: #ff5f56; }
+        .preview-button.yellow { background-color: #ffbd2e; }
+        .preview-button.green { background-color: #27c93f; }
+        iframe { width: 100%; height: 100%; border: none; }
+        .preview-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .preview-actions button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .preview-actions button:hover { background: var(--secondary-color); }
+        #codeEditor {
+            flex-grow: 1;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .message {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            animation: fadeInUp 0.5s ease;
+            box-shadow: 0 3px 10px var(--shadow-color);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .user-message {
+            background-color: var(--primary-color);
+            color: white;
+            align-self: flex-end;
+            margin-left: 20%;
+        }
+        .bot-message {
+            background-color: #fff;
+            color: var(--text-color);
+            max-width: 80%;
+        }
+        .bot-message pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+        .bot-message code {
+            display: block;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        .thinking {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 4px;
+            animation: pulse 1.5s infinite;
+        }
+        .dot:nth-child(2) { animation-delay: 0.3s; }
+        .dot:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+        .hidden { display: none !important; }
+        @media (max-width: 1024px) {
+            .container { flex-direction: column; height: auto; }
+            .sidebar, .main { width: 100%; }
+            .preview-container { height: 50vh; }
+        }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.3.2/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+<!--            <h1>Advanced HTML Generator</h1>-->
+            <h1>Interactive HTML Generator</h1>
+            <div class="chat-container" id="chatContainer"></div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Describe your HTML requirements...">
+                <button onclick="generateHTML()">Generate</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-header">
+                <h2>Put your ideas into action!</h2>
+                <div class="view-toggle">
+                    <button id="previewToggle" class="active">Preview</button>
+                    <button id="codeToggle">Code</button>
+                </div>
+            </div>
+            <div id="preview" class="preview-container">
+                <div id="previewHeader" class="preview-header hidden">
+                    <div class="preview-buttons">
+                        <div class="preview-button red"></div>
+                        <div class="preview-button yellow"></div>
+                        <div class="preview-button green"></div>
+                    </div>
+                </div>
+                <iframe id="previewFrame"></iframe>
+            </div>
+            <div id="codeView" class="preview-container hidden">
+                <div class="preview-actions">
+                    <button id="copyCode">Copy Code</button>
+                    <button id="downloadHTML">Download HTML</button>
+                </div>
+                <div id="codeEditor"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const conversation = [];
+        const md = window.markdownit();
+        const chatContainer = document.getElementById('chatContainer');
+        const userInput = document.getElementById('userInput');
+        const previewFrame = document.getElementById('previewFrame');
+        const previewToggle = document.getElementById('previewToggle');
+        const codeToggle = document.getElementById('codeToggle');
+        const previewContainer = document.getElementById('preview');
+        const codeView = document.getElementById('codeView');
+        const copyCodeBtn = document.getElementById('copyCode');
+        const downloadHTMLBtn = document.getElementById('downloadHTML');
+        const previewHeader = document.getElementById('previewHeader');
+
+        let editor;
+
+        userInput.addEventListener('keydown', e => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                generateHTML();
+            }
+        });
+
+        async function generateHTML() {
+            const input = userInput.value.trim();
+            if (!input) return;
+
+            addMessage('user', input);
+            conversation.push({ role: 'user', content: input });
+            userInput.value = '';
+
+            const thinkingElement = addThinkingAnimation();
+
+            try {
+                const response = await fetch('http://direct.virtaicloud.com:47395/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: conversation })
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+                const { generated_text } = await response.json();
+
+                thinkingElement.remove();
+                addMessage('bot', generated_text);
+
+                conversation.push({ role: 'assistant', content: generated_text });
+                const htmlContent = generated_text.match(/```html([\s\S]*?)```/)?.[1]?.trim();
+                if (htmlContent) {
+                    updatePreview(htmlContent);
+                    previewContainer.style.display = 'block';
+                    previewHeader.classList.remove('hidden');
+                }
+            } catch (error) {
+                thinkingElement.remove();
+                addMessage('bot', 'Sorry, something went wrong.');
+                console.error('Error:', error);
+            }
+        }
+
+        function addMessage(sender, text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            messageDiv.innerHTML = sender === 'bot' ? md.render(text) : text;
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function addThinkingAnimation() {
+            const thinkingElement = document.createElement('div');
+            thinkingElement.className = 'thinking';
+            thinkingElement.innerHTML = '<div class="dot"></div>'.repeat(3);
+            chatContainer.appendChild(thinkingElement);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+            return thinkingElement;
+        }
+
+        function updatePreview(htmlContent) {
+            const previewDocument = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            previewDocument.open();
+            previewDocument.write(htmlContent);
+            previewDocument.close();
+
+            if (editor) {
+                editor.setValue(htmlContent);
+                editor.clearSelection();
+            }
+        }
+
+        previewToggle.addEventListener('click', () => {
+            previewToggle.classList.add('active');
+            codeToggle.classList.remove('active');
+            previewContainer.classList.remove('hidden');
+            codeView.classList.add('hidden');
+        });
+
+        codeToggle.addEventListener('click', () => {
+            codeToggle.classList.add('active');
+            previewToggle.classList.remove('active');
+            codeView.classList.remove('hidden');
+            previewContainer.classList.add('hidden');
+            if (!editor) {
+                editor = ace.edit("codeEditor");
+                editor.setTheme("ace/theme/monokai");
+                editor.getSession().setMode("ace/mode/html");
+            }
+            // 确保 code 视图显示正确的 HTML 代码
+            const previewDocument = previewFrame.contentDocument || previewFrame.contentWindow.document;
+            const htmlContent = previewDocument.documentElement.outerHTML;
+            editor.setValue(htmlContent);
+            editor.clearSelection();
+        });
+
+        copyCodeBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(editor.getValue()).then(() => {
+                alert('Code copied to clipboard!');
+            });
+        });
+
+        downloadHTMLBtn.addEventListener('click', () => {
+            const code = editor.getValue();
+            const blob = new Blob([code], {type: 'text/html'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'generated_html.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // 初始化编辑器
+        document.addEventListener('DOMContentLoaded', () => {
+            editor = ace.edit("codeEditor");
+            editor.setTheme("ace/theme/monokai");
+            editor.getSession().setMode("ace/mode/html");
+            editor.setValue("<html>\n  <body>\n    <h1>Welcome to Advanced HTML Generator</h1>\n    <p>Your generated HTML will appear here.</p>\n  </body>\n</html>");
+            editor.clearSelection();
+        });
+        addMessage('bot', "Hello 👋, let's turn your idea into a webpage together!");
+    </script>
+</body>
+</html>
