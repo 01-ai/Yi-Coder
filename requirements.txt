@@ -1,0 +1,6 @@
+torch
+transformers>=4.36.2
+safetensors
+accelerate
+vllm
+
