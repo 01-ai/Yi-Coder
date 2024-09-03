@@ -104,7 +104,7 @@ Ollama run Yi-Coder
 ```
 
 # Cookbook
-- [System prompt](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_swift.ipynb): Enhance coding workflow with code completion, insertion, and quality assurance.
+- [System prompt](https://github.com/01-ai/Yi-Coder/blob/main/cookbook/System_prompt/System_prompt.ipynb): Enhance coding workflow with code completion, insertion, and quality assurance.
 - [Webpage](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_transformers.ipynb): Turn your ideas into web pages!
 - [NL2SQL](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/Inference_using_lmdeploy.ipynb): Convert natural language queries into Structured Query Language (SQL).
 - [Fine-tune](https://github.com/01-ai/Yi-Coder/blob/main/en/opensource/Inference/vLLM_Inference_tutorial.ipynb): Fine-tune the Yi-Coder series models for your specific needs.
