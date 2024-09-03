@@ -10,8 +10,8 @@
 Yi-Coder excels in long-context understanding, handling up to 128K tokens for project-level code comprehension and generation. Despite its relatively small size, Yi-coder is versatile in tasks like programming, code editing, debugging, completion, and mathematical reasoning. 
 
 <p align="left">
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo1.gif?raw=true" alt="demo1" width="500"/>
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo2.gif?raw=true" alt="demo2" width="500"/>
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo1.gif?raw=true" alt="demo1" width="400"/>
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo2.gif?raw=true" alt="demo2" width="400"/>
 </p>
 
 For more details, see Yi-Coder blog.
