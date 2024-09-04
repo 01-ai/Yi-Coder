@@ -48,21 +48,6 @@ git clone https://github.com/01-ai/Yi-Coder.git
 cd Yi-Coder
 pip install -r requirements.txt
 ```
-
-## Ollama
-You can run Yi-Coder on Ollama locally.
-
-1. After [installing Ollama](https://github.com/ollama/ollama/tree/main/docs), you can start the Ollama service. Note that keep this service running while you use Ollama.
-  
-    ```python
-    ollama serve
-    ```
-
-2. Run Yi-Coder models. For more Yi models supported by Ollama, see [Yi tags](https://ollama.com/library/yi/tags).
-   
-    ```python
-    ollama run yi-coder
-    ```
     
 ## Transformers
 You can use transformers to run inference with Yi-Coder models (both chat and base versions) as follows:
@@ -154,9 +139,4 @@ If you create derivative works based on this model, please include the following
 
 ```This work is a derivative of [The Yi Series Model You Based On] by 01.AI, licensed under the Apache 2.0 License.```
 
-# Prosper with Yi
- 🚀 Propser with Yi-Coder—star it! 🌟
- 
-<p align="left">
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/star.gif?raw=true" alt="star" width="500"/>
-</p>
+
