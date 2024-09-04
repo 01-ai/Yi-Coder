@@ -36,8 +36,7 @@ Key features:
 
 
 <p align="left">
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo1.gif?raw=true" alt="demo1" width="400"/>
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo2.gif?raw=true" alt="demo2" width="400"/>
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/demo1.gif?raw=true" alt="demo1" width="500"/>
 </p>
 
 For more details, see [Yi-Coder blog](https://01-ai.github.io/)
@@ -54,6 +53,22 @@ git clone https://github.com/01-ai/Yi-Coder.git
 cd Yi-Coder
 pip install -r requirements.txt
 ```
+
+## Ollama
+You can run Yi-Coder on Ollama locally.
+
+1. After [installing Ollama](https://github.com/ollama/ollama/tree/main/docs), you can start the Ollama service. Note that keep this service running while you use Ollama.
+  
+    ```python
+    ollama serve
+    ```
+
+2. Run Yi-Coder models. For more Yi models supported by Ollama, see [Yi tags](https://ollama.com/library/yi/tags).
+   
+    ```python
+    ollama run yi: yicoder
+    ```
+    
 ## Transformers
 You can use transformers to run inference with Yi-Coder models (both chat and base versions) as follows:
 ```python
@@ -126,11 +141,6 @@ for output in outputs:
     generated_text = output.outputs[0].text
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 
-```
-## Ollama
-Yi-Coder series models are now available on Ollama! Install the latest version of Ollama and run the following command: 
-```bash
-Ollama run Yi-Coder
 ```
 
 # Cookbook
