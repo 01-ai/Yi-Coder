@@ -1,24 +1,17 @@
-<table style="border-collapse: collapse; border: none;">
-  <tr style="border: none;">
-    <td width="60%" style="border: none; padding: 0;">
-      <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="100%"/>
-    </td>
-    <td width="40%" style="border: none; padding: 0;">
-      <div align="center">
-        <picture> 
-        <img src="https://raw.githubusercontent.com/01-ai/Yi/main/assets/img/Yi_logo_icon_light.svg" width="120px">
-        </picture>
-         <br/>
-        <a href="https://github.com/01-ai">🐙 GitHub</a> •
-        <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> 
-        <br/>
-        <a href="https://github.com/01-ai/Yi-1.5/issues/2">💬 WeChat</a> •
-        <a href="https://twitter.com/01ai_yi">🐤 Twitter</a> •
-        <a href="https://01-ai.github.io/">💪 Tech Blog</a>
-      </div>
-    </td>
-  </tr>
-</table>
+<div style="display: flex; align-items: center;">
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="500" style="margin-right: 20px;"/>
+  <div>
+    <p align="center"> 
+      <a href="https://github.com/01-ai">🐙 GitHub</a> •
+      <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> •
+      <a href="https://twitter.com/01ai_yi">🐤 Twitter</a> •
+      <a href="https://github.com/01-ai/Yi-1.5/issues/2">💬 WeChat</a> •
+      <a href="https://01-ai.github.io/">💪 Tech Blog</a>
+    </p>
+  </div>
+</div>
+
+
 
 # Intro
 Yi-Coder is a series of open-source code language models that delivers state-of-the-art coding performance with fewer than 10 billion parameters. 
