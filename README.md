@@ -1,7 +1,7 @@
 <div style="display: flex; align-items: center;">
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="500" style="margin-right: 20px;"/>
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="450" style="margin-right: 20px;"/>
   <div>
-    <p align="center"> 
+    <p align="left"> 
       <a href="https://github.com/01-ai">🐙 GitHub</a> •
       <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> •
       <a href="https://twitter.com/01ai_yi">🐤 Twitter</a> •
