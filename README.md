@@ -7,7 +7,7 @@
   <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> •
   <a href="https://twitter.com/01ai_yi">🐤 Twitter</a> •
   <a href="https://github.com/01-ai/Yi-1.5/issues/2">💬 WeChat</a> •
-  <a href="https://01-ai.github.io/blog.html?post=en/2024-09-05-A-Small-but-Mighty-LLM-for-Code.md">📑 Yi-Coder Blog</a>
+  <a href="https://01-ai.github.io/blog.html?post=en/2024-09-05-A-Small-but-Mighty-LLM-for-Code.md">📑 Blog</a>
 </div>
 
 ---
