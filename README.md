@@ -10,6 +10,13 @@
   <a href="https://01-ai.github.io/">💪 Tech Blog</a>
 </div>
 
+---
+
+- [Intro](#intro)
+- [News](#news)
+- [Quick Start](#quick-start)
+- [Cookbook](#cookbook)
+- [License](#license)
 
 
 # Intro
@@ -147,5 +154,9 @@ If you create derivative works based on this model, please include the following
 
 ```This work is a derivative of [The Yi Series Model You Based On] by 01.AI, licensed under the Apache 2.0 License.```
 
-# Star
+# Prosper with Yi
  🚀 Propser with Yi-Coder—star it! 🌟
+ 
+<p align="left">
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/star.gif?raw=true" alt="star" width="500"/>
+</p>
