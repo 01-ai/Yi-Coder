@@ -15,7 +15,7 @@ Yi Coder is a powerful code generation model that lets you build websites with j
 * **Navigate to the `demo/Webpage` Directory:**
 
    ```bash
-   cd Yi-Coder/demo/Webpage
+   cd Yi-Coder/cookbook/Webpage
    ```
 
 **Ready to Get Started? It's a Two-Step Process:**
