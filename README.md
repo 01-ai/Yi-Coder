@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="https://github.com/01-ai/Yi-Coder/raw/main/assets/yicoder.png" alt="Yi-Coder Logo" width="400"/>
+<!--   <img src="https://github.com/01-ai/Yi-Coder/raw/main/assets/yicoder.png" alt="Yi-Coder Logo" width="400"/> -->
 </div>
 
 <table>
