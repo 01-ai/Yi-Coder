@@ -34,7 +34,7 @@ Key features:
 | Yi-Coder-1.5B      | Base | [🤗 Hugging Face](https://huggingface.co/01-ai/Yi-Coder-1.5B) • [🤖 ModelScope](https://www.modelscope.cn/models/01ai/Yi-Coder-1.5B) • [🟣 wisemodel](https://wisemodel.cn/models/01.AI/Yi-Coder-1.5B) |
 
 
-For more details, see [Yi-Coder blog](https://01-ai.github.io/)
+For more details, see [Yi-Coder blog](https://01-ai.github.io/blog.html?post=en/2024-09-05-A-Small-but-Mighty-LLM-for-Code.md)
 
 
 # News
