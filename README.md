@@ -1,10 +1,9 @@
-
-<table>
-  <tr>
-    <td width="60%">
+<table style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td width="60%" style="border: none; padding: 0;">
       <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="100%"/>
     </td>
-    <td width="40%">
+    <td width="40%" style="border: none; padding: 0;">
       <div align="center">
         <a href="https://github.com/01-ai">🐙 GitHub</a> •
         <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> •
