@@ -5,12 +5,15 @@
     </td>
     <td width="40%" style="border: none; padding: 0;">
       <div align="center">
+        <picture> 
+        <img src="https://raw.githubusercontent.com/01-ai/Yi/main/assets/img/Yi_logo_icon_light.svg" width="120px">
+        </picture>
+         <br/>
         <a href="https://github.com/01-ai">🐙 GitHub</a> •
-        <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> •
-        <a href="https://twitter.com/01ai_yi">🐤 Twitter</a>
+        <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> 
         <br/>
         <a href="https://github.com/01-ai/Yi-1.5/issues/2">💬 WeChat</a> •
-        <a href="https://arxiv.org/abs/2403.04652">📝 Paper</a> •
+        <a href="https://twitter.com/01ai_yi">🐤 Twitter</a> •
         <a href="https://01-ai.github.io/">💪 Tech Blog</a>
       </div>
     </td>
