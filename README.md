@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="450"/>
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="400"/>
 </div>
 
 <div align="center">
