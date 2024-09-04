@@ -1,7 +1,18 @@
 
-<p align="center"> 
-  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="400"/> 
-</p>
+<div style="display: flex; align-items: center;">
+  <img src="https://github.com/01-ai/Yi-Coder/blob/main/assets/yicoder.gif?raw=true" alt="yicoder" width="350" style="margin-right: 20px;"/>
+  <div>
+    <p align="left"> 
+      <a href="https://github.com/01-ai">🐙 GitHub</a> •
+      <a href="https://discord.gg/hYUwWddeAu">👾 Discord</a> •
+      <a href="https://twitter.com/01ai_yi">🐤 Twitter</a> 
+      <br/>
+      <a href="https://github.com/01-ai/Yi-1.5/issues/2">💬 WeChat</a> •
+      <a href="https://arxiv.org/abs/2403.04652">📝 Paper</a> •
+      <a href="https://01-ai.github.io/">💪 Tech Blog</a>
+    </p>
+  </div>
+</div>
 
 # Intro
 Yi-Coder is a series of open-source code language models that delivers state-of-the-art coding performance with fewer than 10 billion parameters. 
@@ -9,6 +20,13 @@ Yi-Coder is a series of open-source code language models that delivers state-of-
 Key features:
 - Excelling in long-context understanding with a maximum context length of 128K tokens.
 - Supporting 52 major programming languages, including popular ones such as Java, Python, JavaScript, and C++.
+
+| Name               | Type | Download                                                                                                                                          |
+|--------------------|------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Yi-Coder-9B-Chat   | Chat | [🤗 Hugging Face](https://huggingface.co/01-ai/Yi-Coder-9B-Chat) • [🤖 ModelScope](https://www.modelscope.cn/models/01ai/Yi-Coder-9B-Chat) • [🟣 wisemodel](https://wisemodel.cn/models/01.AI/Yi-Coder-9B-Chat) |
+| Yi-Coder-1.5B-Chat | Chat | [🤗 Hugging Face](https://huggingface.co/01-ai/Yi-Coder-1.5B-Chat) • [🤖 ModelScope](https://www.modelscope.cn/models/01ai/Yi-Coder-1.5B-Chat) • [🟣 wisemodel](https://wisemodel.cn/models/01.AI/Yi-Coder-1.5B-Chat) |
+| Yi-Coder-9B        | Base | [🤗 Hugging Face](https://huggingface.co/01-ai/Yi-Coder-9B) • [🤖 ModelScope](https://www.modelscope.cn/models/01ai/Yi-Coder-9B) • [🟣 wisemodel](https://wisemodel.cn/models/01.AI/Yi-Coder-9B) |
+| Yi-Coder-1.5B      | Base | [🤗 Hugging Face](https://huggingface.co/01-ai/Yi-Coder-1.5B) • [🤖 ModelScope](https://www.modelscope.cn/models/01ai/Yi-Coder-1.5B) • [🟣 wisemodel](https://wisemodel.cn/models/01.AI/Yi-Coder-1.5B) |
 
 
 <p align="left">
@@ -65,7 +83,7 @@ generated_ids = [
 response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 print(response)
 ```
-## vllm
+## vLLM
 You can also use vLLM to reason about Yi-Coder models. vLLM is a fast and easy-to-use library for reasoning about and serving large language models (LLMs). Be sure to install vLLM and then do the following
 ```python
 from transformers import AutoTokenizer
@@ -103,7 +121,7 @@ for output in outputs:
     print(f"Prompt: {prompt!r}, Generated text: {generated_text!r}")
 
 ```
-## ollama
+## Ollama
 Yi-Coder series models are now available on Ollama! Install the latest version of Ollama and run the following command: 
 ```bash
 Ollama run Yi-Coder
