@@ -61,7 +61,7 @@ You can run Yi-Coder on Ollama locally.
 2. Run Yi-Coder models. For more Yi models supported by Ollama, see [Yi tags](https://ollama.com/library/yi/tags).
    
     ```python
-    ollama run yi: yicoder
+    ollama run yi-coder
     ```
     
 ## Transformers
