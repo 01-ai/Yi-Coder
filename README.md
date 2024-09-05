@@ -46,7 +46,7 @@ For more details, see [Yi-Coder blog](https://01-ai.github.io/blog.html?post=en/
 
 # Quick Start
 ## Requirements
-Make sure you have `python>=3.9` installed before using it.To set up the environment and install the requirements, run the following command: 
+Make sure you have `python>=3.9` installed before using it. To set up the environment and install the requirements, run the following command: 
 ```bash
 git clone https://github.com/01-ai/Yi-Coder.git
 cd Yi-Coder
