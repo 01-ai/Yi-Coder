@@ -55,7 +55,7 @@ pip install -r requirements.txt
 ## Ollama
 You can run Yi-Coder on Ollama locally.
 
-1. After [installing Ollama](ollama/docs at main · ollama/ollama), you can start the Ollama service. Note that keep this service running while you use Ollama.
+1. After [installing Ollama](https://ollama.com/), you can start the Ollama service. Note that keep this service running while you use Ollama.
 
     ```python
     ollama serve
