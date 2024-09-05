@@ -2,7 +2,7 @@
 
 SWIFT is a framework open-sourced by modelscope that supports training, inference, evaluation, and deployment of multi-modal large models. It can directly implement the complete chain from model training and evaluation to application.
 
-Quantization using SWIFT is very convenient, and can be completed in just a few steps. There are many parameters that can be adjusted during quantization, such as the model to be quantized, precision, method, etc. For details, please refer to the [official documentation](https://github.com/modelscope/swift/blob/main/docs/source/LLM/LLM%E9%87%8F%E5%8C%96%E6%96%87%E6%A1%A3.md).
+Quantization using SWIFT is very convenient, and can be completed in just a few steps. There are many parameters that can be adjusted during quantization, such as the model to be quantized, precision, method, etc. For details, please refer to the [official documentation](https://github.com/modelscope/ms-swift/blob/main/docs/source/Instruction/LLM%E9%87%8F%E5%8C%96%E4%B8%8E%E5%AF%BC%E5%87%BA%E6%96%87%E6%A1%A3.md).
 
 #### Installation
 
